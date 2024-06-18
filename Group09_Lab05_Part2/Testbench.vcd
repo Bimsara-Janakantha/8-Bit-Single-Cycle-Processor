@@ -1,0 +1,115 @@
+$date
+	Wed Apr 10 09:10:02 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Testbench $end
+$scope module myReg $end
+$var wire 1 ! CLK $end
+$var wire 8 " IN [7:0] $end
+$var wire 3 # INADDRESS [2:0] $end
+$var wire 8 $ OUT1 [7:0] $end
+$var wire 3 % OUT1ADDRESS [2:0] $end
+$var wire 8 & OUT2 [7:0] $end
+$var wire 3 ' OUT2ADDRESS [2:0] $end
+$var wire 1 ( RESET $end
+$var wire 1 ) WRITE $end
+$var integer 32 * i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx *
+0)
+0(
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+0!
+$end
+#1
+1!
+#2
+0!
+1(
+#3
+1!
+#4
+b1000 *
+0!
+1)
+b111 "
+b1 #
+0(
+#5
+1!
+#6
+0!
+0)
+#7
+1!
+#8
+0!
+b1 '
+b0 %
+#9
+1!
+#10
+0!
+b111 &
+b0 $
+#11
+1!
+#12
+0!
+#13
+1!
+1)
+b1100 "
+b110 #
+#14
+0!
+#15
+1!
+0)
+#16
+0!
+#17
+1!
+#18
+0!
+b110 %
+#19
+1!
+#20
+0!
+b1100 $
+#21
+1!
+#22
+0!
+#23
+1!
+b111 "
+b1 #
+#24
+0!
+#25
+1!
+#26
+0!
+#27
+1!
+#28
+0!

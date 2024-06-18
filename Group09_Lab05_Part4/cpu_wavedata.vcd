@@ -1,0 +1,708 @@
+$date
+	Thu Jun 13 12:55:49 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$var wire 1 ! CLK $end
+$var wire 32 " INSTRUCTION [31:0] $end
+$var wire 1 # RESET $end
+$var wire 8 $ twos_Complemet [7:0] $end
+$var wire 8 % subMuxOut [7:0] $end
+$var wire 8 & pcAdderOut [7:0] $end
+$var wire 8 ' jumpMuxOut [7:0] $end
+$var wire 8 ( immMuxOut [7:0] $end
+$var wire 8 ) branchMuxOut [7:0] $end
+$var wire 1 * ZERO $end
+$var wire 8 + REGOUT2 [7:0] $end
+$var wire 8 , REGOUT1 [7:0] $end
+$var wire 8 - ALURESULT [7:0] $end
+$var reg 3 . ALUOP [2:0] $end
+$var reg 1 / BRANCH $end
+$var reg 8 0 IMMEDIATE1 [7:0] $end
+$var reg 8 1 IMMEDIATE2 [7:0] $end
+$var reg 1 2 JUMP $end
+$var reg 8 3 OPCODE [7:0] $end
+$var reg 32 4 PC [31:0] $end
+$var reg 8 5 READREG1 [7:0] $end
+$var reg 8 6 READREG2 [7:0] $end
+$var reg 1 7 WRITEENABLE $end
+$var reg 8 8 WRITEREG [7:0] $end
+$var reg 1 9 immMuxSelect $end
+$var reg 8 : nextPC [7:0] $end
+$var reg 1 ; subMuxSelect $end
+$scope module aluUnit $end
+$var wire 3 < SELECT [2:0] $end
+$var wire 8 = orOut [7:0] $end
+$var wire 8 > fwdOut [7:0] $end
+$var wire 8 ? andOut [7:0] $end
+$var wire 8 @ addOut [7:0] $end
+$var wire 8 A DATA2 [7:0] $end
+$var wire 8 B DATA1 [7:0] $end
+$var reg 8 C RESULT [7:0] $end
+$var reg 1 * ZERO $end
+$scope module addUnit $end
+$var wire 8 D RESULT [7:0] $end
+$var wire 8 E DATA2 [7:0] $end
+$var wire 8 F DATA1 [7:0] $end
+$upscope $end
+$scope module andUnit $end
+$var wire 8 G RESULT [7:0] $end
+$var wire 8 H DATA2 [7:0] $end
+$var wire 8 I DATA1 [7:0] $end
+$upscope $end
+$scope module fwdUnit $end
+$var wire 8 J RESULT [7:0] $end
+$var wire 8 K DATA2 [7:0] $end
+$upscope $end
+$scope module orUnit $end
+$var wire 8 L RESULT [7:0] $end
+$var wire 8 M DATA2 [7:0] $end
+$var wire 8 N DATA1 [7:0] $end
+$upscope $end
+$upscope $end
+$scope module branchMux $end
+$var wire 8 O IN1 [7:0] $end
+$var wire 1 P SELECT $end
+$var wire 8 Q IN2 [7:0] $end
+$var reg 8 R OUT [7:0] $end
+$upscope $end
+$scope module complementUnit $end
+$var wire 8 S RESULT [7:0] $end
+$var wire 8 T DATA2 [7:0] $end
+$upscope $end
+$scope module immediateMux $end
+$var wire 8 U IN1 [7:0] $end
+$var wire 1 9 SELECT $end
+$var wire 8 V IN2 [7:0] $end
+$var reg 8 W OUT [7:0] $end
+$upscope $end
+$scope module jumpMux $end
+$var wire 8 X IN1 [7:0] $end
+$var wire 1 2 SELECT $end
+$var wire 8 Y IN2 [7:0] $end
+$var reg 8 Z OUT [7:0] $end
+$upscope $end
+$scope module pcAdder $end
+$var wire 8 [ DATA1 [7:0] $end
+$var wire 8 \ DATA2 [7:0] $end
+$var wire 8 ] RESULT [7:0] $end
+$upscope $end
+$scope module regUnit $end
+$var wire 1 ! CLK $end
+$var wire 8 ^ IN [7:0] $end
+$var wire 8 _ INADDRESS [7:0] $end
+$var wire 8 ` OUT1ADDRESS [7:0] $end
+$var wire 8 a OUT2ADDRESS [7:0] $end
+$var wire 1 # RESET $end
+$var wire 1 7 WRITE $end
+$var reg 8 b OUT1 [7:0] $end
+$var reg 8 c OUT2 [7:0] $end
+$var integer 32 d i [31:0] $end
+$upscope $end
+$scope module subMux $end
+$var wire 8 e IN1 [7:0] $end
+$var wire 8 f IN2 [7:0] $end
+$var wire 1 ; SELECT $end
+$var reg 8 g OUT [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 h \REGISTER[0] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 i \REGISTER[1] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 j \REGISTER[2] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 k \REGISTER[3] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 l \REGISTER[4] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 m \REGISTER[5] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 n \REGISTER[6] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module cpu_tb $end
+$scope module mycpu $end
+$scope module regUnit $end
+$var reg 8 o \REGISTER[7] [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+bx i
+bx h
+bx g
+bx f
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx00 \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+xP
+bx O
+bx N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+x;
+bx :
+x9
+bx 8
+x7
+bx 6
+bx 5
+bx 4
+bx 3
+x2
+bx 1
+bx 0
+x/
+bx .
+bx -
+bx ,
+bx +
+x*
+bx )
+bx (
+bx '
+bx &
+bx %
+bx $
+1#
+bx "
+0!
+$end
+#4
+1!
+#5
+b0 :
+b0 O
+b0 [
+b0 4
+b0 o
+b0 n
+b0 m
+b0 l
+b0 k
+b0 j
+b0 i
+b0 h
+b1000 d
+#6
+b100 :
+b100 O
+b100 [
+0#
+#7
+b0 \
+b101 1
+b101 U
+b0 0
+b101 6
+b101 a
+b0 5
+b0 `
+b0 8
+b0 _
+b0 3
+b100 '
+b100 Z
+b100 )
+b100 R
+b100 X
+0P
+0/
+02
+b101 "
+#8
+0*
+b101 (
+b101 A
+b101 E
+b101 H
+b101 K
+b101 M
+b101 W
+17
+b0 .
+b0 <
+09
+0!
+#9
+b101 -
+b101 C
+b101 ^
+bx1x1 =
+bx1x1 L
+b0x0x ?
+b0x0x G
+b101 >
+b101 J
+b100 &
+b100 Q
+b100 Y
+b100 ]
+b0 +
+b0 T
+b0 c
+b0 e
+b0 ,
+b0 B
+b0 F
+b0 I
+b0 N
+b0 b
+#10
+b0 $
+b0 S
+b0 f
+b101 =
+b101 L
+b0 ?
+b0 G
+#11
+b101 @
+b101 D
+#12
+1!
+#13
+b100 4
+b101 h
+#14
+b1000 '
+b1000 Z
+b1000 )
+b1000 R
+b1000 X
+b1000 :
+b1000 O
+b1000 [
+07
+#15
+b1001 (
+b1001 A
+b1001 E
+b1001 H
+b1001 K
+b1001 M
+b1001 W
+b100 \
+b1001 1
+b1001 U
+b1 0
+b1001 6
+b1001 a
+b1 8
+b1 _
+b10000000000001001 "
+#16
+17
+b1001 -
+b1001 C
+b1001 ^
+b1001 =
+b1001 L
+b1001 >
+b1001 J
+0!
+#17
+b1001 @
+b1001 D
+b1100 &
+b1100 Q
+b1100 Y
+b1100 ]
+b101 ,
+b101 B
+b101 F
+b101 I
+b101 N
+b101 b
+#18
+b1101 =
+b1101 L
+b1 ?
+b1 G
+#19
+b1110 @
+b1110 D
+#20
+1!
+#21
+b1001 i
+b1000 4
+#22
+b1100 '
+b1100 Z
+b1100 )
+b1100 R
+b1100 X
+b1100 :
+b1100 O
+b1100 [
+07
+#23
+b1 (
+b1 A
+b1 E
+b1 H
+b1 K
+b1 M
+b1 W
+b11000 \
+b1 1
+b1 U
+b110 0
+b1 6
+b1 a
+b110 8
+b110 _
+b10 3
+b10000001100000000000000001 "
+#24
+b0 (
+b0 A
+b0 E
+b0 H
+b0 K
+b0 M
+b0 W
+b0 %
+b0 V
+b0 g
+17
+b1 .
+b1 <
+19
+0;
+b1110 -
+b1110 C
+b1110 ^
+b101 =
+b101 L
+b1 >
+b1 J
+0!
+#25
+b1001 (
+b1001 A
+b1001 E
+b1001 H
+b1001 K
+b1001 M
+b1001 W
+b1001 %
+b1001 V
+b1001 g
+b0 ?
+b0 G
+b0 >
+b0 J
+b100100 &
+b100100 Q
+b100100 Y
+b100100 ]
+b1001 +
+b1001 T
+b1001 c
+b1001 e
+#26
+b1101 =
+b1101 L
+b1 ?
+b1 G
+b1001 >
+b1001 J
+b11110111 $
+b11110111 S
+b11110111 f
+#28
+1!
+#29
+b1100 4
+b1110 n
+#30
+b10000 '
+b10000 Z
+b10000 )
+b10000 R
+b10000 X
+b10000 :
+b10000 O
+b10000 [
+07
+#31
+bx00 \
+bx 1
+bx U
+bx 0
+bx 6
+bx a
+bx 5
+bx `
+bx 8
+bx _
+bx 3
+bx "
+#32
+0!
+#33
+bx (
+bx A
+bx E
+bx H
+bx K
+bx M
+bx W
+bx %
+bx V
+bx g
+bx &
+bx Q
+bx Y
+bx ]
+bx +
+bx T
+bx c
+bx e
+bx ,
+bx B
+bx F
+bx I
+bx N
+bx b
+#34
+bx >
+bx J
+bx $
+bx S
+bx f
+bx =
+bx L
+bx ?
+bx G
+#35
+bx -
+bx C
+bx ^
+bx @
+bx D
+#36
+1!
+#37
+b10000 4
+#38
+b10100 '
+b10100 Z
+b10100 )
+b10100 R
+b10100 X
+b10100 :
+b10100 O
+b10100 [
+#40
+0!
+#44
+1!
+#45
+b10100 4
+#46
+b11000 '
+b11000 Z
+b11000 )
+b11000 R
+b11000 X
+b11000 :
+b11000 O
+b11000 [
+#48
+0!
+#52
+1!
+#53
+b11000 4
+#54
+b11100 '
+b11100 Z
+b11100 )
+b11100 R
+b11100 X
+b11100 :
+b11100 O
+b11100 [
+#56
+0!
+#60
+1!
+#61
+b11100 4
+#62
+b100000 '
+b100000 Z
+b100000 )
+b100000 R
+b100000 X
+b100000 :
+b100000 O
+b100000 [
+#64
+0!
+#68
+1!
+#69
+b100000 4
+#70
+b100100 '
+b100100 Z
+b100100 )
+b100100 R
+b100100 X
+b100100 :
+b100100 O
+b100100 [
+#72
+0!
+#76
+1!
+#77
+b100100 4
+#78
+b101000 '
+b101000 Z
+b101000 )
+b101000 R
+b101000 X
+b101000 :
+b101000 O
+b101000 [
+#80
+0!
+#84
+1!
+#85
+b101000 4
+#86
+b101100 '
+b101100 Z
+b101100 )
+b101100 R
+b101100 X
+b101100 :
+b101100 O
+b101100 [
+#88
+0!
+#92
+1!
+#93
+b101100 4
+#94
+b110000 '
+b110000 Z
+b110000 )
+b110000 R
+b110000 X
+b110000 :
+b110000 O
+b110000 [
+#96
+0!
+#100
+1!
+#101
+b110000 4
+#102
+b110100 '
+b110100 Z
+b110100 )
+b110100 R
+b110100 X
+b110100 :
+b110100 O
+b110100 [
+#104
+0!
+#106
